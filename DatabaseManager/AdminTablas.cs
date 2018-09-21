@@ -18,7 +18,8 @@ namespace DatabaseManager
         DataTable dt = new DataTable();
         NpgsqlConnection conn;
         NpgsqlDataAdapter da;
-        String valoresTabla;
+        NpgsqlCommandBuilder commandBuilder;
+        BindingSource bs = new BindingSource();
 
         public AdminTablas()
         {
@@ -46,8 +47,9 @@ namespace DatabaseManager
                 conn.Open();
                 string sql = "SELECT * FROM "+nomTabla+";";
                 da = new NpgsqlDataAdapter(sql, conn);
+                commandBuilder = new NpgsqlCommandBuilder(da);
                 ds.Reset();
-                da.Fill(ds);
+                da.Fill(ds,nomTabla);
                 dt = ds.Tables[0];
                 dataGridView1.DataSource = dt;
                 conn.Close();
@@ -61,46 +63,30 @@ namespace DatabaseManager
 
         private void bSubmit_Click(object sender, EventArgs e)
         {
-            foreach(DataGridView dgv in dataGridView1.Rows)
-            {
-                foreach (DataGridViewCell dgvc in dgv.Columns)
-                {
-                    
-                }
-            }
+            updateState();
         }
 
-        private void insertarTabla()
+        /*private String insertarTabla()
         {
-            try
+            String nomTabla = tbTabla.Text;
+            var statement = "INSERT INTO " + nomTabla + " VALUES(";
+            DataGridViewRow row = dataGridView1.Rows[this.dataGridView1.RowCount - 2];
+            for (int i = 0; i < this.dataGridView1.ColumnCount; i++)
             {
-                using (var conn = new NpgsqlConnection("Host=localhost;Username=" + ConnectionManager.usuario +
-                ";Password=" + ConnectionManager.password +
-                ";Database=" + ConnectionManager.usuario))
+                if (i != 0)
                 {
-                    conn.Open();
-                    using (var cmd = new NpgsqlCommand())
-                    {
-                        cmd.Connection = conn;
-                        cmd.CommandText = "CREATE TABLE " + tableName + "(" + columnas + ")";
-                        cmd.ExecuteNonQuery();
-                        Console.WriteLine("Se creo tabla exitosamente");
-                    }
+                    statement += ",";
                 }
+                statement += $@" '{row.Cells[i].Value}'";
             }
-            catch (NpgsqlException ex)
-            {
-                MessageBox.Show(ex.ToString());
-                throw;
-            }
-        }
+            statement += ")";
+            return statement;
+        }*/
 
         private void bGenerar_Click(object sender, EventArgs e)
         {
             String nomTabla = tbTabla.Text;
             String commandToExecute = "pg_dump -t "+nomTabla+" "+ConnectionManager.usuario+ " > F:/DatabaseManager/DDLs/" +nomTabla+".sql";
-
-
             Process cmd = new Process();
             cmd.StartInfo.FileName = "cmd.exe";
             cmd.StartInfo.RedirectStandardInput = true;
@@ -121,6 +107,79 @@ namespace DatabaseManager
             String nomTabla = tbTabla.Text;
             VerDDL verDDL = new VerDDL(nomTabla);
             verDDL.ShowDialog();
+        }
+
+        private void bEliminarTabla_Click(object sender, EventArgs e)
+        {
+            String nomTabla = tbTabla.Text;
+            try
+            {
+                using (var conn = new NpgsqlConnection("Host=localhost;Username=" + ConnectionManager.usuario +
+                ";Password=" + ConnectionManager.password +
+                ";Database=" + ConnectionManager.usuario))
+                {
+                    conn.Open();
+                    using (var cmd = new NpgsqlCommand())
+                    {
+                        cmd.Connection = conn;
+                        cmd.CommandText = "DROP TABLE " + nomTabla;
+                        cmd.ExecuteNonQuery();
+                        Console.WriteLine("Se elimino tabla exitosamente");
+                    }
+                }
+            }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+        }
+
+        private void bActualizar_Click(object sender, EventArgs e)
+        {
+            updateState();
+        }
+
+        private void bBorrarF_Click(object sender, EventArgs e)
+        {
+            String tableName = tbTabla.Text;
+            String pk = dataGridView1.CurrentCell.Value.ToString();
+            String columnName = dataGridView1.Columns[0].HeaderText;
+            try
+            {
+                using (var conn = new NpgsqlConnection("Host=localhost;Username=" + ConnectionManager.usuario +
+                ";Password=" + ConnectionManager.password +
+                ";Database=" + ConnectionManager.usuario))
+                {
+                    conn.Open();
+                    using (var cmd = new NpgsqlCommand())
+                    {
+                        cmd.Connection = conn;
+                        cmd.CommandText = "delete from " + tableName + " where " + columnName + "=" + pk; ;
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Se elimino fila exitosamente");
+                    }
+                }
+            }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void updateState()
+        {
+            try
+            {
+                String tableName = tbTabla.Text;
+                da.Update(ds, tableName);
+                MessageBox.Show("Datos actualizados");
+            }
+            catch (NpgsqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
         }
     }
 }

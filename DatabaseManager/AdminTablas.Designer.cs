@@ -36,6 +36,9 @@
             this.bGenerar = new System.Windows.Forms.Button();
             this.bVer = new System.Windows.Forms.Button();
             this.bSubmit = new System.Windows.Forms.Button();
+            this.bEliminarTabla = new System.Windows.Forms.Button();
+            this.bActualizar = new System.Windows.Forms.Button();
+            this.bBorrarF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +50,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(40, 50);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(338, 377);
+            this.dataGridView1.Size = new System.Drawing.Size(338, 485);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -78,7 +81,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(432, 396);
+            this.button1.Location = new System.Drawing.Point(432, 504);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 31);
             this.button1.TabIndex = 4;
@@ -88,7 +91,7 @@
             // 
             // bGenerar
             // 
-            this.bGenerar.Location = new System.Drawing.Point(432, 289);
+            this.bGenerar.Location = new System.Drawing.Point(432, 405);
             this.bGenerar.Name = "bGenerar";
             this.bGenerar.Size = new System.Drawing.Size(132, 31);
             this.bGenerar.TabIndex = 5;
@@ -98,7 +101,7 @@
             // 
             // bVer
             // 
-            this.bVer.Location = new System.Drawing.Point(432, 343);
+            this.bVer.Location = new System.Drawing.Point(432, 453);
             this.bVer.Name = "bVer";
             this.bVer.Size = new System.Drawing.Size(132, 31);
             this.bVer.TabIndex = 6;
@@ -112,15 +115,48 @@
             this.bSubmit.Name = "bSubmit";
             this.bSubmit.Size = new System.Drawing.Size(132, 31);
             this.bSubmit.TabIndex = 7;
-            this.bSubmit.Text = "Submit";
+            this.bSubmit.Text = "Insertar";
             this.bSubmit.UseVisualStyleBackColor = true;
             this.bSubmit.Click += new System.EventHandler(this.bSubmit_Click);
+            // 
+            // bEliminarTabla
+            // 
+            this.bEliminarTabla.Location = new System.Drawing.Point(432, 354);
+            this.bEliminarTabla.Name = "bEliminarTabla";
+            this.bEliminarTabla.Size = new System.Drawing.Size(132, 31);
+            this.bEliminarTabla.TabIndex = 8;
+            this.bEliminarTabla.Text = "Eliminar tabla";
+            this.bEliminarTabla.UseVisualStyleBackColor = true;
+            this.bEliminarTabla.Click += new System.EventHandler(this.bEliminarTabla_Click);
+            // 
+            // bActualizar
+            // 
+            this.bActualizar.Location = new System.Drawing.Point(432, 229);
+            this.bActualizar.Name = "bActualizar";
+            this.bActualizar.Size = new System.Drawing.Size(132, 31);
+            this.bActualizar.TabIndex = 9;
+            this.bActualizar.Text = "Actualizar";
+            this.bActualizar.UseVisualStyleBackColor = true;
+            this.bActualizar.Click += new System.EventHandler(this.bActualizar_Click);
+            // 
+            // bBorrarF
+            // 
+            this.bBorrarF.Location = new System.Drawing.Point(432, 281);
+            this.bBorrarF.Name = "bBorrarF";
+            this.bBorrarF.Size = new System.Drawing.Size(132, 31);
+            this.bBorrarF.TabIndex = 10;
+            this.bBorrarF.Text = "Borrar";
+            this.bBorrarF.UseVisualStyleBackColor = true;
+            this.bBorrarF.Click += new System.EventHandler(this.bBorrarF_Click);
             // 
             // AdminTablas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 467);
+            this.ClientSize = new System.Drawing.Size(613, 586);
+            this.Controls.Add(this.bBorrarF);
+            this.Controls.Add(this.bActualizar);
+            this.Controls.Add(this.bEliminarTabla);
             this.Controls.Add(this.bSubmit);
             this.Controls.Add(this.bVer);
             this.Controls.Add(this.bGenerar);
@@ -147,5 +183,8 @@
         private System.Windows.Forms.Button bGenerar;
         private System.Windows.Forms.Button bVer;
         private System.Windows.Forms.Button bSubmit;
+        private System.Windows.Forms.Button bEliminarTabla;
+        private System.Windows.Forms.Button bActualizar;
+        private System.Windows.Forms.Button bBorrarF;
     }
 }
