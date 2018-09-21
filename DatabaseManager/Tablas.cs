@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DatabaseManager
 {
-    public partial class Form1 : Form
+    public partial class Tablas : Form
     {
-        public Form1()
+        public Tablas()
         {
             InitializeComponent();
         }
