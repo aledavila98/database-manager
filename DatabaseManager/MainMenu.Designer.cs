@@ -55,6 +55,7 @@
             this.bTablas.TabIndex = 1;
             this.bTablas.Text = "Tablas";
             this.bTablas.UseVisualStyleBackColor = true;
+            this.bTablas.Click += new System.EventHandler(this.bTablas_Click);
             // 
             // bIndices
             // 

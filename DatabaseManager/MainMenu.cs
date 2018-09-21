@@ -24,5 +24,12 @@ namespace DatabaseManager
             conexiones.Show();
             this.Hide();
         }
+
+        private void bTablas_Click(object sender, EventArgs e)
+        {
+            Tablas tablas = new Tablas();
+            tablas.Show();
+            this.Hide();
+        }
     }
 }
