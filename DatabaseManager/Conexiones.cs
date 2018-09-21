@@ -85,5 +85,12 @@ namespace DatabaseManager
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainMenu main = new MainMenu();
+            main.Show();
+            this.Hide();
+        }
     }
 }

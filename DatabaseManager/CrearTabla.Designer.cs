@@ -58,6 +58,7 @@
             this.tbNomTabla = new System.Windows.Forms.TextBox();
             this.tbCantColumnas = new System.Windows.Forms.TextBox();
             this.bCrear = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -296,7 +297,7 @@
             // 
             // bCrear
             // 
-            this.bCrear.Location = new System.Drawing.Point(249, 470);
+            this.bCrear.Location = new System.Drawing.Point(181, 470);
             this.bCrear.Name = "bCrear";
             this.bCrear.Size = new System.Drawing.Size(121, 29);
             this.bCrear.TabIndex = 29;
@@ -304,11 +305,22 @@
             this.bCrear.UseVisualStyleBackColor = true;
             this.bCrear.Click += new System.EventHandler(this.bCrear_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(470, 470);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 29);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Regresar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // CrearTabla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 536);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.bCrear);
             this.Controls.Add(this.tbCantColumnas);
             this.Controls.Add(this.tbNomTabla);
@@ -378,5 +390,6 @@
         private System.Windows.Forms.TextBox tbNomTabla;
         private System.Windows.Forms.TextBox tbCantColumnas;
         private System.Windows.Forms.Button bCrear;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -73,6 +73,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminTablas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTablas.Designer.cs">
+      <DependentUpon>AdminTablas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexiones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,15 @@
     <Compile Include="Tablas.Designer.cs">
       <DependentUpon>Tablas.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerDDL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerDDL.Designer.cs">
+      <DependentUpon>VerDDL.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminTablas.resx">
+      <DependentUpon>AdminTablas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Conexiones.resx">
       <DependentUpon>Conexiones.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +144,9 @@
     </Compile>
     <EmbeddedResource Include="Tablas.resx">
       <DependentUpon>Tablas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerDDL.resx">
+      <DependentUpon>VerDDL.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

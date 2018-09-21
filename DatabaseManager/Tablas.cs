@@ -56,5 +56,19 @@ namespace DatabaseManager
             crear.Show();
             this.Hide();
         }
+
+        private void bAdminTablas_Click(object sender, EventArgs e)
+        {
+            AdminTablas admin = new AdminTablas();
+            admin.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainMenu main = new MainMenu();
+            main.Show();
+            this.Hide();
+        }
     }
 }

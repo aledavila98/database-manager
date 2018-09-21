@@ -77,5 +77,12 @@ namespace DatabaseManager
             }
             return listaColumnas;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Tablas tablas = new Tablas();
+            tablas.Show();
+            this.Hide();
+        }
     }
 }
