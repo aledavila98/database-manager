@@ -88,13 +88,14 @@ namespace DatabaseManager
             String nomTabla = tbTabla.Text;
             String commandToExecute = "pg_dump -t "+nomTabla+" "+ConnectionManager.usuario+ " > F:/DatabaseManager/DDLs/" +nomTabla+".sql";
             Process cmd = new Process();
-            cmd.StartInfo.FileName = "cmd.exe";
+            cmd.StartInfo.FileName = "C:/Program Files/PostgreSQL/10/bin/pg_dump.exe";
             cmd.StartInfo.RedirectStandardInput = true;
             cmd.StartInfo.RedirectStandardOutput = true;
             cmd.StartInfo.CreateNoWindow = true;
             cmd.StartInfo.UseShellExecute = false;
             cmd.Start();
             cmd.StandardInput.WriteLine(commandToExecute);
+            cmd.StandardInput.WriteLine(ConnectionManager.password);
             cmd.StandardInput.Flush();
             cmd.StandardInput.Close();
             Console.WriteLine(cmd.StandardOutput.ReadToEnd());
@@ -155,7 +156,7 @@ namespace DatabaseManager
                     using (var cmd = new NpgsqlCommand())
                     {
                         cmd.Connection = conn;
-                        cmd.CommandText = "delete from " + tableName + " where " + columnName + "=" + pk; ;
+                        cmd.CommandText = "delete from " + tableName + " where " + columnName + "='" + pk+"'"; ;
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Se elimino fila exitosamente");
                     }
@@ -180,6 +181,12 @@ namespace DatabaseManager
                 MessageBox.Show(ex.Message);
                 throw;
             }
+        }
+
+        private void bAñadir_Click(object sender, EventArgs e)
+        {
+            Columna columna = new Columna(tbTabla.Text);
+            columna.ShowDialog();
         }
     }
 }

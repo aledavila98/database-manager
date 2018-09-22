@@ -39,6 +39,7 @@
             this.bEliminarTabla = new System.Windows.Forms.Button();
             this.bActualizar = new System.Windows.Forms.Button();
             this.bBorrarF = new System.Windows.Forms.Button();
+            this.bAñadir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(40, 50);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(338, 485);
+            this.dataGridView1.Size = new System.Drawing.Size(338, 535);
             this.dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -81,7 +82,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(432, 504);
+            this.button1.Location = new System.Drawing.Point(432, 554);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 31);
             this.button1.TabIndex = 4;
@@ -91,7 +92,7 @@
             // 
             // bGenerar
             // 
-            this.bGenerar.Location = new System.Drawing.Point(432, 405);
+            this.bGenerar.Location = new System.Drawing.Point(432, 449);
             this.bGenerar.Name = "bGenerar";
             this.bGenerar.Size = new System.Drawing.Size(132, 31);
             this.bGenerar.TabIndex = 5;
@@ -101,7 +102,7 @@
             // 
             // bVer
             // 
-            this.bVer.Location = new System.Drawing.Point(432, 453);
+            this.bVer.Location = new System.Drawing.Point(432, 498);
             this.bVer.Name = "bVer";
             this.bVer.Size = new System.Drawing.Size(132, 31);
             this.bVer.TabIndex = 6;
@@ -121,7 +122,7 @@
             // 
             // bEliminarTabla
             // 
-            this.bEliminarTabla.Location = new System.Drawing.Point(432, 354);
+            this.bEliminarTabla.Location = new System.Drawing.Point(432, 399);
             this.bEliminarTabla.Name = "bEliminarTabla";
             this.bEliminarTabla.Size = new System.Drawing.Size(132, 31);
             this.bEliminarTabla.TabIndex = 8;
@@ -149,11 +150,22 @@
             this.bBorrarF.UseVisualStyleBackColor = true;
             this.bBorrarF.Click += new System.EventHandler(this.bBorrarF_Click);
             // 
+            // bAñadir
+            // 
+            this.bAñadir.Location = new System.Drawing.Point(432, 331);
+            this.bAñadir.Name = "bAñadir";
+            this.bAñadir.Size = new System.Drawing.Size(132, 31);
+            this.bAñadir.TabIndex = 11;
+            this.bAñadir.Text = "Añadir columna";
+            this.bAñadir.UseVisualStyleBackColor = true;
+            this.bAñadir.Click += new System.EventHandler(this.bAñadir_Click);
+            // 
             // AdminTablas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 586);
+            this.ClientSize = new System.Drawing.Size(613, 634);
+            this.Controls.Add(this.bAñadir);
             this.Controls.Add(this.bBorrarF);
             this.Controls.Add(this.bActualizar);
             this.Controls.Add(this.bEliminarTabla);
@@ -186,5 +198,6 @@
         private System.Windows.Forms.Button bEliminarTabla;
         private System.Windows.Forms.Button bActualizar;
         private System.Windows.Forms.Button bBorrarF;
+        private System.Windows.Forms.Button bAñadir;
     }
 }

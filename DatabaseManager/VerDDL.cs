@@ -13,10 +13,11 @@ namespace DatabaseManager
     public partial class VerDDL : Form
     {
         String tabla;
-        public VerDDL(String tabla)
+        public VerDDL(String t)
         {
             InitializeComponent();
-            this.tabla = tabla;
+            tabla = t;
+            DDLTabla();
         }
 
         private void VerDDL_Load(object sender, EventArgs e)

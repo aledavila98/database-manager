@@ -65,6 +65,7 @@
             this.bIndices.TabIndex = 2;
             this.bIndices.Text = "Indices";
             this.bIndices.UseVisualStyleBackColor = true;
+            this.bIndices.Click += new System.EventHandler(this.bIndices_Click);
             // 
             // bProcedimientos
             // 

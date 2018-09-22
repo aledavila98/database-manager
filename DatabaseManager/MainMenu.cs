@@ -31,5 +31,12 @@ namespace DatabaseManager
             tablas.Show();
             this.Hide();
         }
+
+        private void bIndices_Click(object sender, EventArgs e)
+        {
+            Indices indices = new Indices();
+            indices.Show();
+            this.Hide();
+        }
     }
 }
