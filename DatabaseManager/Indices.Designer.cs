@@ -32,7 +32,9 @@
             this.bVerIndex = new System.Windows.Forms.Button();
             this.bRegresar = new System.Windows.Forms.Button();
             this.bAgregar = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -42,7 +44,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(62, 59);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(451, 351);
+            this.dataGridView1.Size = new System.Drawing.Size(240, 351);
             this.dataGridView1.TabIndex = 0;
             // 
             // bVerIndex
@@ -57,7 +59,7 @@
             // 
             // bRegresar
             // 
-            this.bRegresar.Location = new System.Drawing.Point(412, 434);
+            this.bRegresar.Location = new System.Drawing.Point(542, 434);
             this.bRegresar.Name = "bRegresar";
             this.bRegresar.Size = new System.Drawing.Size(101, 26);
             this.bRegresar.TabIndex = 2;
@@ -67,7 +69,7 @@
             // 
             // bAgregar
             // 
-            this.bAgregar.Location = new System.Drawing.Point(193, 434);
+            this.bAgregar.Location = new System.Drawing.Point(248, 434);
             this.bAgregar.Name = "bAgregar";
             this.bAgregar.Size = new System.Drawing.Size(202, 26);
             this.bAgregar.TabIndex = 3;
@@ -75,11 +77,24 @@
             this.bAgregar.UseVisualStyleBackColor = true;
             this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(354, 59);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(289, 351);
+            this.dataGridView2.TabIndex = 4;
+            // 
             // Indices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 488);
+            this.ClientSize = new System.Drawing.Size(712, 488);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.bAgregar);
             this.Controls.Add(this.bRegresar);
             this.Controls.Add(this.bVerIndex);
@@ -87,6 +102,7 @@
             this.Name = "Indices";
             this.Text = "Indices";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -97,5 +113,6 @@
         private System.Windows.Forms.Button bVerIndex;
         private System.Windows.Forms.Button bRegresar;
         private System.Windows.Forms.Button bAgregar;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

@@ -35,6 +35,9 @@
             this.bCrearInd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.bCrearCons = new System.Windows.Forms.Button();
+            this.bDeleteIdx = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -75,12 +78,12 @@
             this.dataGridView2.Location = new System.Drawing.Point(308, 108);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(197, 185);
+            this.dataGridView2.Size = new System.Drawing.Size(264, 185);
             this.dataGridView2.TabIndex = 3;
             // 
             // bCrearInd
             // 
-            this.bCrearInd.Location = new System.Drawing.Point(337, 326);
+            this.bCrearInd.Location = new System.Drawing.Point(308, 326);
             this.bCrearInd.Name = "bCrearInd";
             this.bCrearInd.Size = new System.Drawing.Size(124, 29);
             this.bCrearInd.TabIndex = 4;
@@ -107,11 +110,44 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // bCrearCons
+            // 
+            this.bCrearCons.Location = new System.Drawing.Point(308, 381);
+            this.bCrearCons.Name = "bCrearCons";
+            this.bCrearCons.Size = new System.Drawing.Size(124, 29);
+            this.bCrearCons.TabIndex = 7;
+            this.bCrearCons.Text = "Crear Constraint";
+            this.bCrearCons.UseVisualStyleBackColor = true;
+            this.bCrearCons.Click += new System.EventHandler(this.bCrearCons_Click);
+            // 
+            // bDeleteIdx
+            // 
+            this.bDeleteIdx.Location = new System.Drawing.Point(448, 326);
+            this.bDeleteIdx.Name = "bDeleteIdx";
+            this.bDeleteIdx.Size = new System.Drawing.Size(124, 29);
+            this.bDeleteIdx.TabIndex = 8;
+            this.bDeleteIdx.Text = "Borrar indice";
+            this.bDeleteIdx.UseVisualStyleBackColor = true;
+            this.bDeleteIdx.Click += new System.EventHandler(this.bDeleteIdx_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(448, 381);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(124, 29);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Borrar constraint";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // IndexesConstraints
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 480);
+            this.ClientSize = new System.Drawing.Size(624, 480);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bDeleteIdx);
+            this.Controls.Add(this.bCrearCons);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bCrearInd);
@@ -137,5 +173,8 @@
         private System.Windows.Forms.Button bCrearInd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bCrearCons;
+        private System.Windows.Forms.Button bDeleteIdx;
+        private System.Windows.Forms.Button button2;
     }
 }

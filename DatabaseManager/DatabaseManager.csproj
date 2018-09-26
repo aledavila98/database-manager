@@ -92,11 +92,47 @@
       <DependentUpon>Conexiones.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectionManager.cs" />
+    <Compile Include="Constraint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Constraint.Designer.cs">
+      <DependentUpon>Constraint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearProcedimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearProcedimiento.Designer.cs">
+      <DependentUpon>CrearProcedimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearTabla.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CrearTabla.Designer.cs">
       <DependentUpon>CrearTabla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateTrigger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateTrigger.Designer.cs">
+      <DependentUpon>CreateTrigger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateView.Designer.cs">
+      <DependentUpon>CreateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DropIndex.Designer.cs">
+      <DependentUpon>DropIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DropTable.Designer.cs">
+      <DependentUpon>DropTable.cs</DependentUpon>
     </Compile>
     <Compile Include="IndexesConstraints.cs">
       <SubType>Form</SubType>
@@ -122,6 +158,18 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModifyFunction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifyFunction.Designer.cs">
+      <DependentUpon>ModifyFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procedimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procedimientos.Designer.cs">
+      <DependentUpon>Procedimientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tablas.cs">
@@ -130,11 +178,23 @@
     <Compile Include="Tablas.Designer.cs">
       <DependentUpon>Tablas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Triggers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Triggers.Designer.cs">
+      <DependentUpon>Triggers.cs</DependentUpon>
+    </Compile>
     <Compile Include="VerDDL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VerDDL.Designer.cs">
       <DependentUpon>VerDDL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views.Designer.cs">
+      <DependentUpon>Views.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminTablas.resx">
       <DependentUpon>AdminTablas.cs</DependentUpon>
@@ -145,8 +205,26 @@
     <EmbeddedResource Include="Conexiones.resx">
       <DependentUpon>Conexiones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Constraint.resx">
+      <DependentUpon>Constraint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearProcedimiento.resx">
+      <DependentUpon>CrearProcedimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearTabla.resx">
       <DependentUpon>CrearTabla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateTrigger.resx">
+      <DependentUpon>CreateTrigger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateView.resx">
+      <DependentUpon>CreateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropIndex.resx">
+      <DependentUpon>DropIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropTable.resx">
+      <DependentUpon>DropTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IndexesConstraints.resx">
       <DependentUpon>IndexesConstraints.cs</DependentUpon>
@@ -160,6 +238,12 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModifyFunction.resx">
+      <DependentUpon>ModifyFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procedimientos.resx">
+      <DependentUpon>Procedimientos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -172,8 +256,14 @@
     <EmbeddedResource Include="Tablas.resx">
       <DependentUpon>Tablas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Triggers.resx">
+      <DependentUpon>Triggers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VerDDL.resx">
       <DependentUpon>VerDDL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views.resx">
+      <DependentUpon>Views.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

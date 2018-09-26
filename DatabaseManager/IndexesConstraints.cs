@@ -13,8 +13,8 @@ namespace DatabaseManager
 {
     public partial class IndexesConstraints : Form
     {
-        DataSet ds = new DataSet();
-        DataTable dt = new DataTable();
+        DataSet ds1 = new DataSet();
+        DataTable dt1 = new DataTable();
         String tableName;
  
         public IndexesConstraints()
@@ -39,10 +39,10 @@ namespace DatabaseManager
                 NpgsqlConnection conn = new NpgsqlConnection(connstring);
                 conn.Open();
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(sql, conn);
-                ds.Reset();
-                da.Fill(ds);
-                dt = ds.Tables[0];
-                dataGridView2.DataSource = dt;
+                ds1.Reset();
+                da.Fill(ds1);
+                dt1 = ds1.Tables[0];
+                dataGridView2.DataSource = dt1;
                 conn.Close();
             }
             catch (Exception msg)
@@ -62,6 +62,8 @@ namespace DatabaseManager
                     ConnectionManager.password, ConnectionManager.usuario);
                 NpgsqlConnection conn = new NpgsqlConnection(connstring);
                 conn.Open();
+                DataSet ds = new DataSet();
+                DataTable dt = new DataTable();
                 string sql = "SELECT c.relname AS Tables_in FROM pg_catalog.pg_class c" +
                     " LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace" +
                     " WHERE pg_catalog.pg_table_is_visible(c.oid)" +
@@ -112,6 +114,25 @@ namespace DatabaseManager
             Indices indices = new Indices();
             indices.Show();
             this.Hide();
+        }
+
+        private void bCrearCons_Click(object sender, EventArgs e)
+        {
+            String columnName = dataGridView2.CurrentCell.Value.ToString();
+            Constraint constraint = new Constraint(columnName);
+            constraint.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DropTable drop = new DropTable("");
+            drop.ShowDialog();
+        }
+
+        private void bDeleteIdx_Click(object sender, EventArgs e)
+        {
+            DropIndex drop = new DropIndex();
+            drop.ShowDialog();
         }
     }
 }

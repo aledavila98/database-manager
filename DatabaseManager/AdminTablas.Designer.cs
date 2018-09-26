@@ -37,7 +37,6 @@
             this.bVer = new System.Windows.Forms.Button();
             this.bSubmit = new System.Windows.Forms.Button();
             this.bEliminarTabla = new System.Windows.Forms.Button();
-            this.bActualizar = new System.Windows.Forms.Button();
             this.bBorrarF = new System.Windows.Forms.Button();
             this.bAñadir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -116,7 +115,7 @@
             this.bSubmit.Name = "bSubmit";
             this.bSubmit.Size = new System.Drawing.Size(132, 31);
             this.bSubmit.TabIndex = 7;
-            this.bSubmit.Text = "Insertar";
+            this.bSubmit.Text = "Submit";
             this.bSubmit.UseVisualStyleBackColor = true;
             this.bSubmit.Click += new System.EventHandler(this.bSubmit_Click);
             // 
@@ -130,19 +129,9 @@
             this.bEliminarTabla.UseVisualStyleBackColor = true;
             this.bEliminarTabla.Click += new System.EventHandler(this.bEliminarTabla_Click);
             // 
-            // bActualizar
-            // 
-            this.bActualizar.Location = new System.Drawing.Point(432, 229);
-            this.bActualizar.Name = "bActualizar";
-            this.bActualizar.Size = new System.Drawing.Size(132, 31);
-            this.bActualizar.TabIndex = 9;
-            this.bActualizar.Text = "Actualizar";
-            this.bActualizar.UseVisualStyleBackColor = true;
-            this.bActualizar.Click += new System.EventHandler(this.bActualizar_Click);
-            // 
             // bBorrarF
             // 
-            this.bBorrarF.Location = new System.Drawing.Point(432, 281);
+            this.bBorrarF.Location = new System.Drawing.Point(432, 234);
             this.bBorrarF.Name = "bBorrarF";
             this.bBorrarF.Size = new System.Drawing.Size(132, 31);
             this.bBorrarF.TabIndex = 10;
@@ -152,7 +141,7 @@
             // 
             // bAñadir
             // 
-            this.bAñadir.Location = new System.Drawing.Point(432, 331);
+            this.bAñadir.Location = new System.Drawing.Point(432, 349);
             this.bAñadir.Name = "bAñadir";
             this.bAñadir.Size = new System.Drawing.Size(132, 31);
             this.bAñadir.TabIndex = 11;
@@ -167,7 +156,6 @@
             this.ClientSize = new System.Drawing.Size(613, 634);
             this.Controls.Add(this.bAñadir);
             this.Controls.Add(this.bBorrarF);
-            this.Controls.Add(this.bActualizar);
             this.Controls.Add(this.bEliminarTabla);
             this.Controls.Add(this.bSubmit);
             this.Controls.Add(this.bVer);
@@ -196,7 +184,6 @@
         private System.Windows.Forms.Button bVer;
         private System.Windows.Forms.Button bSubmit;
         private System.Windows.Forms.Button bEliminarTabla;
-        private System.Windows.Forms.Button bActualizar;
         private System.Windows.Forms.Button bBorrarF;
         private System.Windows.Forms.Button bAñadir;
     }

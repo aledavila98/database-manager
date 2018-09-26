@@ -38,5 +38,26 @@ namespace DatabaseManager
             indices.Show();
             this.Hide();
         }
+
+        private void bProcedimientos_Click(object sender, EventArgs e)
+        {
+            Procedimientos procedimientos = new Procedimientos();
+            procedimientos.Show();
+            this.Hide();
+        }
+
+        private void bUsuarios_Click(object sender, EventArgs e)
+        {
+            Triggers tr = new Triggers();
+            tr.Show();
+            this.Hide();
+        }
+
+        private void bVistas_Click(object sender, EventArgs e)
+        {
+            Views views = new Views();
+            views.Show();
+            this.Hide();
+        }
     }
 }

@@ -41,7 +41,7 @@ namespace DatabaseManager
             } catch (NpgsqlException ex)
             {
                 MessageBox.Show(ex.ToString());
-                throw;
+                
             }
         }
 

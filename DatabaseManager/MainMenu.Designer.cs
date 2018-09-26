@@ -75,6 +75,7 @@
             this.bProcedimientos.TabIndex = 3;
             this.bProcedimientos.Text = "Procedimientos y funciones";
             this.bProcedimientos.UseVisualStyleBackColor = true;
+            this.bProcedimientos.Click += new System.EventHandler(this.bProcedimientos_Click);
             // 
             // bUsuarios
             // 
@@ -82,8 +83,9 @@
             this.bUsuarios.Name = "bUsuarios";
             this.bUsuarios.Size = new System.Drawing.Size(278, 39);
             this.bUsuarios.TabIndex = 4;
-            this.bUsuarios.Text = "Usuarios";
+            this.bUsuarios.Text = "Triggers";
             this.bUsuarios.UseVisualStyleBackColor = true;
+            this.bUsuarios.Click += new System.EventHandler(this.bUsuarios_Click);
             // 
             // bVistas
             // 
@@ -93,6 +95,7 @@
             this.bVistas.TabIndex = 5;
             this.bVistas.Text = "Vistas";
             this.bVistas.UseVisualStyleBackColor = true;
+            this.bVistas.Click += new System.EventHandler(this.bVistas_Click);
             // 
             // lName
             // 
